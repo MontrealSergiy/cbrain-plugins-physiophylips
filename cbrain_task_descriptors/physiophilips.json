@@ -1,0 +1,80 @@
+{
+    "tool-version": "7.3.0", 
+    "name": "PhysioPhilips",
+    "description": "Physio : Physiological noise correction for fMRI (only Siemens equipment)",
+    "author": "Lars Kasper, Zurich University and ETH Zurich", 
+    "descriptor-url": "https://github.com/MontrealSergiy/physiophilips/blob/master/cbrain_task_descriptors/physiophilips.json", 
+    "command-line": "mkdir -p [OUTDIR]; /usr/bin/mlrtapp/physiophilips [OUTDIR] [physlogfile] [fmrimovefile] [configfile] [presetdefaults]", 
+    "inputs": [
+        {
+            "command-line-flag": "physlogfile",
+            "description": "Siemens physiological log file.", 
+            "value-key": "[physlogfile]", 
+            "optional": false, 
+            "list": false, 
+            "type": "File", 
+            "id": "physlogfile", 
+            "name": "Physiological data log"
+        }, 
+        {           
+        "command-line-flag": "fmrimovefile",    
+        "description": "fMRI movement file.", 
+            "value-key": "[fmrimovefile]", 
+            "optional": true, 
+            "list": false, 
+            "type": "File", 
+            "id": "fmrimovefile", 
+            "name": "fMRI movements"
+        }, 
+        {   
+        "description": "Config file, contains preprocessing, model, and such parameters.", 
+            "command-line-flag": "configfile",
+            "value-key": "[configfile]", 
+            "optional": true, 
+            "list": false, 
+            "type": "File", 
+            "id": "configfile", 
+            "name": "Config"
+        }, 
+        {
+            "description": "Set parameters by example from the toolset. Unless the config file gives other values, the paramters would be reset according to one of examples provided with Physio. If you chose 'standard', provide config file", 
+            "command-line-flag": "presetdefaults",
+            "default-value": "standard", 
+            "value-key": "[presetdefaults]", 
+            "optional": false, 
+            "list": false,
+            "value-choices": ["PHILIPS_ECG3T_V1", "standard"],             
+            "type": "String", 
+            "id": "presetdefaults", 
+            "name": "Set parameters by example"
+        },
+        {
+            "description": "The folder where the results will be stored",             
+            "default-value": "Resutls", 
+            "value-key": "[OUTDIR]", 
+            "optional": false,         
+            "type": "String", 
+            "id": "output_file", 
+            "name": "Save to folder"
+        }
+
+    ],
+    "schema-version": "0.5", 
+    "output-files": [
+        {
+            "description": "A folder containing the output files and a copy of configs.", 
+            "list": false, 
+            "id": "output",
+            "value-key": "[OUTDIR]", 
+            "optional": false, 
+            "path-template": "[OUTDIR]", 
+            "name": "Output folder"
+        }
+    ], 
+    "tags": {
+        "domain": [
+            "neuroinformatics", 
+            "fMRI"
+        ]
+    }
+}
