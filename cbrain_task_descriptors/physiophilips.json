@@ -1,6 +1,6 @@
 {
     "tool-version": "7.3.0", 
-    "name": "PhysioPhilips",
+    "name": "PhysIOphilips",
     "description": "Physio : Physiological noise correction for fMRI (only Siemens equipment)",
     "author": "Lars Kasper, Zurich University and ETH Zurich", 
     "descriptor-url": "https://github.com/MontrealSergiy/physiophilips/blob/master/cbrain_task_descriptors/physiophilips.json", 
