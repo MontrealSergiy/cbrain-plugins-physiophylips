@@ -74,7 +74,10 @@
     "tags": {
         "domain": [
             "neuroinformatics", 
-            "fMRI"
-        ]
+            "fMRI",
+            "neuroimaging"
+        ],
+    "suggested-resources": {
+        "walltime-estimate": 3660
     }
 }
