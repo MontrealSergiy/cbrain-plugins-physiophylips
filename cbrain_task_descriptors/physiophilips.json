@@ -37,7 +37,7 @@
             "name": "Config"
         }, 
         {
-            "description": "Set parameters by example from the toolset. Unless the config file gives other values, the paramters would be reset according to one of examples provided with Physio. If you chose 'standard', provide config file", 
+            "description": "Set otherwise not specified parameters from the toolset's wiki's examples at https://gitlab.ethz.ch/physio/physio-doc/-/wikis/EXAMPLES. Unless the config file gives other values, the parameters would be reset according to one of examples provided with Physio. If you chose 'standard', provide config file", 
             "command-line-flag": "presetdefaults",
             "default-value": "standard", 
             "value-key": "[presetdefaults]", 
@@ -46,16 +46,16 @@
             "value-choices": ["PHILIPS_ECG3T_V1", "standard"],             
             "type": "String", 
             "id": "presetdefaults", 
-            "name": "Set parameters by example"
+            "name": "Defaulting"
         },
         {
             "description": "The folder where the results will be stored",             
-            "default-value": "Resutls", 
+            "default-value": "Results", 
             "value-key": "[OUTDIR]", 
             "optional": false,         
             "type": "String", 
             "id": "output_file", 
-            "name": "Save to folder"
+            "name": "Output Folder"
         }
 
     ],
