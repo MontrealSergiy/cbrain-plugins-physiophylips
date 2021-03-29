@@ -27,7 +27,7 @@
             "name": "fMRI movements"
         }, 
         {   
-        "description": "Config file, contains preprocessing, model, and such parameters.", 
+        "description": "Config json file, contains preprocessing, model, and such parameters (but not input files)", 
             "command-line-flag": "configfile",
             "value-key": "[configfile]", 
             "optional": true, 
@@ -37,7 +37,7 @@
             "name": "Config"
         }, 
         {
-            "description": "Set otherwise not specified parameters from the toolset's wiki's examples at https://gitlab.ethz.ch/physio/physio-doc/-/wikis/EXAMPLES. Unless the config file gives other values, the parameters would be reset according to one of examples provided with Physio. If you chose 'standard', provide config file", 
+            "description": "Set otherwise not specified parameters from the toolset's wiki's examples at https://gitlab.ethz.ch/physio/physio-doc/-/wikis/EXAMPLES. Unless the config file gives other values, the parameters would be reset according to one of examples provided with Physio or to standard defaults. However if you chose 'standard' you MUST PROVIDE json config file", 
             "command-line-flag": "presetdefaults",
             "default-value": "standard", 
             "value-key": "[presetdefaults]", 
