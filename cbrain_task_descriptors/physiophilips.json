@@ -1,7 +1,7 @@
 {
     "tool-version": "7.3.0", 
     "name": "physio4philips",
-    "description": "Physio : Physiological noise correction for fMRI (only PHILIPS equipment)",
+    "description": "Physio : Physiological noise correction for fMRI (only for PHILIPS equipment)",
     "author": "Lars Kasper, Zurich University and ETH Zurich", 
     "descriptor-url": "https://github.com/MontrealSergiy/cbrain_plugins_physiophilips/blob/master/cbrain_task_descriptors/physiophilips.json", 
     "command-line": "mkdir -p [OUTDIR]; /usr/bin/mlrtapp/physiophilips [OUTDIR] [physlogfile] [fmrimovefile] [configfile] [presetdefaults]", 
