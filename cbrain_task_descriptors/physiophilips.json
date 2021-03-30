@@ -76,7 +76,8 @@
             "neuroinformatics", 
             "fMRI",
             "neuroimaging"
-        ],
+        ]
+    },
     "suggested-resources": {
         "walltime-estimate": 3660
     }
