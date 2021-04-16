@@ -7,7 +7,7 @@
   "command-line": "mkdir -p [OUTDIR]; /usr/bin/mlrtapp/physiotapas [INDIR] [OUT] [configfile] [presetdefaults] [correct] [log_files.align_scan] [log_files.cardiac] [log_files.relative_start_acquisition] [log_files.respiration] [log_files.scan_timing] [log_files.vendor] [model.censor_unreliable_recording_intervals] [model.hrv.delays] [model.hrv.include] [model.movement.censoring_method] [model.movement.censoring_threshold] [model.movement.file_realignment_parameters] [model.movement.include] [model.movement.order] [model.noise_rois.force_coregister] [model.noise_rois.include] [model.noise_rois.n_components] [model.noise_rois.n_voxel_crop] [model.noise_rois.thresholds] [model.orthogonalise] [model.other.include] [model.output_multiple_regressors] [model.output_physio] [model.retroicor.include] [model.retroicor.order.c] [model.retroicor.order.cr] [model.retroicor.order.r] [model.rvt.delays] [model.rvt.include] [ons_secs.c_scaling] [ons_secs.r_scaling] [preproc.cardiac.filter.passband] [preproc.cardiac.filter.type] [preproc.cardiac.initial_cpulse_select.file] [preproc.cardiac.initial_cpulse_select.max_heart_rate_bpm] [preproc.cardiac.initial_cpulse_select.method] [preproc.cardiac.initial_cpulse_select.min] [preproc.cardiac.modality] [preproc.cardiac.posthoc_cpulse_select.lower_thresh] [preproc.cardiac.posthoc_cpulse_select.method] [preproc.cardiac.posthoc_cpulse_select.percentile] [preproc.cardiac.posthoc_cpulse_select.upper_thresh] [scan_timing.sqpar.Ndummies] [scan_timing.sqpar.Nscans] [scan_timing.sqpar.Nslices] [scan_timing.sqpar.onset_slice] [scan_timing.sqpar.TR] [scan_timing.sync.grad_direction] [scan_timing.sync.method] [scan_timing.sync.slice] [scan_timing.sync.zero] [verbose.close_figs] [verbose.fig_output_file] [verbose.level] [verbose.save_figs] [verbose.show_figs] [verbose.use_tabs]",
   "inputs": [
     {
-      "description": "Input folder with physiological, fMRI and other data. Unless you are have only one Philips files, you still have to set parameters that show which kind of physio data is in which file.",
+      "description": "Input folder for physiological, fMRI and other data.",
       "value-key": "[INDIR]",
       "optional": false,
       "list": false,
@@ -143,6 +143,10 @@
       "default-value": "No",
       "type": "String",
       "description": "bool",
+      "value-choices": [
+        "Yes",
+        "No"
+      ],
       "optional": true,
       "command-line-flag": "model.censor_unreliable_recording_intervals"
     },
@@ -163,6 +167,10 @@
       "default-value": "No",
       "type": "String",
       "description": "bool",
+      "value-choices": [
+        "Yes",
+        "No"
+      ],
       "optional": true,
       "command-line-flag": "model.hrv.include"
     },
@@ -212,6 +220,10 @@
       "default-value": "Yes",
       "type": "String",
       "description": "bool",
+      "value-choices": [
+        "Yes",
+        "No"
+      ],
       "optional": true,
       "command-line-flag": "model.movement.include"
     },
@@ -244,6 +256,10 @@
       "default-value": "No",
       "type": "String",
       "description": "bool",
+      "value-choices": [
+        "Yes",
+        "No"
+      ],
       "optional": true,
       "command-line-flag": "model.noise_rois.include"
     },
@@ -308,6 +324,10 @@
       "default-value": "No",
       "type": "String",
       "description": "bool",
+      "value-choices": [
+        "Yes",
+        "No"
+      ],
       "optional": true,
       "command-line-flag": "model.other.include"
     },
@@ -338,6 +358,10 @@
       "default-value": "Yes",
       "type": "String",
       "description": "bool",
+      "value-choices": [
+        "Yes",
+        "No"
+      ],
       "optional": true,
       "command-line-flag": "model.retroicor.include"
     },
@@ -391,6 +415,10 @@
       "default-value": "No",
       "type": "String",
       "description": "bool",
+      "value-choices": [
+        "Yes",
+        "No"
+      ],
       "optional": true,
       "command-line-flag": "model.rvt.include"
     },
@@ -658,6 +686,10 @@
       "default-value": "No",
       "type": "String",
       "description": "bool",
+      "value-choices": [
+        "Yes",
+        "No"
+      ],
       "optional": true,
       "command-line-flag": "verbose.close_figs"
     },
@@ -689,6 +721,10 @@
       "default-value": "No",
       "type": "String",
       "description": "bool",
+      "value-choices": [
+        "Yes",
+        "No"
+      ],
       "optional": true,
       "command-line-flag": "verbose.save_figs"
     },
@@ -699,6 +735,10 @@
       "default-value": "Yes",
       "type": "String",
       "description": "bool",
+      "value-choices": [
+        "Yes",
+        "No"
+      ],
       "optional": true,
       "command-line-flag": "verbose.show_figs"
     },
@@ -709,6 +749,10 @@
       "default-value": "No",
       "type": "String",
       "description": "bool",
+      "value-choices": [
+        "Yes",
+        "No"
+      ],
       "optional": true,
       "command-line-flag": "verbose.use_tabs"
     }
