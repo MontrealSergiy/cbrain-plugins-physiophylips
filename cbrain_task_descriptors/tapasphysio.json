@@ -1,0 +1,89 @@
+{
+    "tool-version": "7.3.0", 
+    "name": "physio4philips",
+    "description": "Physio : Physiological noise correction for fMRI (only for PHILIPS equipment)",
+    "author": "Lars Kasper, Zurich University and ETH Zurich", 
+    "descriptor-url": "https://github.com/MontrealSergiy/cbrain_plugins_physiophilips/blob/master/cbrain_task_descriptors/physiophilips.json", 
+    "command-line": "mkdri -p [OUTDIR]; /usr/bin/mlrtapp/physio [INDIR] [OUT] [configfile] [presetdefaults] [correct] ", 
+    "inputs": [
+        {
+            "command-line-flag": "in_dir",
+            "description": "Siemens physiological log file.", 
+            "value-key": "[INDIR]", 
+            "optional": false, 
+            "list": false, 
+            "type": "File", 
+            "id": "in_dir", 
+            "name": "Input folder"
+        }, 
+        {   
+        "description": "Config json file, contains preprocessing, model, and such parameters (but not input files)", 
+            "command-line-flag": "configfile",
+            "value-key": "[configfile]", 
+            "optional": true, 
+            "list": false, 
+            "type": "File", 
+            "id": "configfile", 
+            "name": "Config"
+        }, 
+        {
+            "description": "Set otherwise not specified parameters from the toolset's wiki's examples at https://gitlab.ethz.ch/physio/physio-doc/-/wikis/EXAMPLES. Unless the config file gives other values, the parameters would be reset according to one of examples provided with Physio or to standard defaults. However if you chose 'standard' you MUST PROVIDE json config file", 
+            "command-line-flag": "presetdefaults",
+            "default-value": "standard", 
+            "value-key": "[presetdefaults]", 
+            "optional": false, 
+            "list": false,
+            "value-choices": ["PHILIPS_ECG3T_V1", "standard"],             
+            "type": "String", 
+            "id": "presetdefaults", 
+            "name": "Defaulting"
+        },
+        {
+            "description": "Correct noice in nifty file", 
+            
+            "default-value": "No", 
+            "value-key": "[correct]", 
+            "optional": false, 
+            "list": false,
+            "value-choices": ["No"],             
+            "type": "String", 
+            "id": "correct", 
+            "name": "Correct noice"
+        },
+        {
+            "description": "The results are saved to folder obtained by adding this prefix to the input folder name",             
+            "default-value": "Results_", 
+            "value-key": "[OUT]", 
+            "optional": false,         
+            "type": "String", 
+            "id": "out", 
+            "name": "Output Folder"
+        }
+
+    ],
+    "schema-version": "0.5", 
+    "output-files": [
+        {
+            "description": "A folder containing the output files and a copy of configs.", 
+            "list": false, 
+            "id": "output",
+            "value-key": "[OUTDIR]", 
+            "optional": false, 
+            "path-template": "[OUT][INDIR]", 
+            "name": "Output folder"
+        }
+    ], 
+    "tags": {
+        "domain": [
+            "neuroinformatics", 
+            "fMRI",
+            "neuroimaging"
+        ]
+    },
+    "suggested-resources": {
+        "walltime-estimate": 3660
+    },
+    "custom": {
+        "cbrain:readonly-input-files": true
+    }
+}
