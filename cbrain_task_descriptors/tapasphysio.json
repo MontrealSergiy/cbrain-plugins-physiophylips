@@ -207,7 +207,7 @@
       "id": "model__movement__file_realignment_parameters",
       "name": "model.movement.file_realignment_parameters",
       "value-key": "[model.movement.file_realignment_parameters]",
-      "default-value": "{rp_fMRI.txt}",
+      "default-value": "rp_fMRI.txt",
       "type": "String",
       "description": "String",
       "optional": true,
@@ -217,7 +217,7 @@
       "id": "model__movement__include",
       "name": "model.movement.include",
       "value-key": "[model.movement.include]",
-      "default-value": "Yes",
+      "default-value": "No",
       "type": "String",
       "description": "bool",
       "value-choices": [
