@@ -732,7 +732,7 @@
       "id": "verbose__show_figs",
       "name": "verbose.show_figs",
       "value-key": "[verbose.show_figs]",
-      "default-value": "Yes",
+      "default-value": "No",
       "type": "String",
       "description": "bool",
       "value-choices": [        
