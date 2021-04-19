@@ -1,5 +1,5 @@
 {
-  "tool-version": "7.3.0",
+  "tool-version": "8.0",
   "name": "PhysIO_Tapas",
   "description": "Physio : Physiological noise correction for fMRI (only for PHILIPS equipment)",
   "author": "Lars Kasper, Zurich University and ETH Zurich",
