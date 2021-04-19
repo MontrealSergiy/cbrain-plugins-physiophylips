@@ -735,8 +735,7 @@
       "default-value": "Yes",
       "type": "String",
       "description": "bool",
-      "value-choices": [
-        "Yes",
+      "value-choices": [        
         "No"
       ],
       "optional": true,
@@ -749,8 +748,7 @@
       "default-value": "No",
       "type": "String",
       "description": "bool",
-      "value-choices": [
-        "Yes",
+      "value-choices": [      
         "No"
       ],
       "optional": true,
